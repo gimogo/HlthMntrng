@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>forums package &mdash; OnlineHealthCare-master 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="OnlineHealthCare-master 1.0 documentation" href="index.html" />
+    <link rel="next" title="forums.migrations package" href="forums.migrations.html" />
+    <link rel="prev" title="OnlineHealthCare package" href="OnlineHealthCare.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="forums-package">
+<h1>forums package<a class="headerlink" href="#forums-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="forums.migrations.html">forums.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forums.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forums.migrations.html#module-forums.migrations.0001_initial">forums.migrations.0001_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forums.migrations.html#module-forums.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-forums.admin">
+<span id="forums-admin-module"></span><h2>forums.admin module<a class="headerlink" href="#module-forums.admin" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-forums.apps">
+<span id="forums-apps-module"></span><h2>forums.apps module<a class="headerlink" href="#module-forums.apps" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="forums.apps.ForumsConfig">
+<em class="property">class </em><code class="descclassname">forums.apps.</code><code class="descname">ForumsConfig</code><span class="sig-paren">(</span><em>app_name</em>, <em>app_module</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.apps.ForumsConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.apps.config.AppConfig</span></code></p>
+<dl class="attribute">
+<dt id="forums.apps.ForumsConfig.name">
+<code class="descname">name</code><em class="property"> = 'forums'</em><a class="headerlink" href="#forums.apps.ForumsConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forums.models">
+<span id="forums-models-module"></span><h2>forums.models module<a class="headerlink" href="#module-forums.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="forums.models.Post">
+<em class="property">class </em><code class="descclassname">forums.models.</code><code class="descname">Post</code><span class="sig-paren">(</span><em>id</em>, <em>title</em>, <em>content</em>, <em>date_posted</em>, <em>date_updated</em>, <em>author</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.models.Post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="exception">
+<dt id="forums.models.Post.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#forums.models.Post.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="forums.models.Post.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">Post.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#forums.models.Post.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forums.models.Post.author">
+<code class="descclassname">Post.</code><code class="descname">author</code><a class="headerlink" href="#forums.models.Post.author" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Child.parent</span></code> is a <code class="docutils literal"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forums.models.Post.author_id">
+<code class="descclassname">Post.</code><code class="descname">author_id</code><a class="headerlink" href="#forums.models.Post.author_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forums.models.Post.content">
+<code class="descclassname">Post.</code><code class="descname">content</code><a class="headerlink" href="#forums.models.Post.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forums.models.Post.date_posted">
+<code class="descclassname">Post.</code><code class="descname">date_posted</code><a class="headerlink" href="#forums.models.Post.date_posted" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forums.models.Post.date_updated">
+<code class="descclassname">Post.</code><code class="descname">date_updated</code><a class="headerlink" href="#forums.models.Post.date_updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="forums.models.Post.get_absolute_url">
+<code class="descclassname">Post.</code><code class="descname">get_absolute_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forums.models.Post.get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forums.models.Post.get_next_by_date_posted">
+<code class="descclassname">Post.</code><code class="descname">get_next_by_date_posted</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: date_posted&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.models.Post.get_next_by_date_posted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forums.models.Post.get_next_by_date_updated">
+<code class="descclassname">Post.</code><code class="descname">get_next_by_date_updated</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: date_updated&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.models.Post.get_next_by_date_updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forums.models.Post.get_previous_by_date_posted">
+<code class="descclassname">Post.</code><code class="descname">get_previous_by_date_posted</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: date_posted&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.models.Post.get_previous_by_date_posted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forums.models.Post.get_previous_by_date_updated">
+<code class="descclassname">Post.</code><code class="descname">get_previous_by_date_updated</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: date_updated&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.models.Post.get_previous_by_date_updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forums.models.Post.id">
+<code class="descclassname">Post.</code><code class="descname">id</code><a class="headerlink" href="#forums.models.Post.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forums.models.Post.objects">
+<code class="descclassname">Post.</code><code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object at 0x0000023AC81A55E0&gt;</em><a class="headerlink" href="#forums.models.Post.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forums.models.Post.title">
+<code class="descclassname">Post.</code><code class="descname">title</code><a class="headerlink" href="#forums.models.Post.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forums.tests">
+<span id="forums-tests-module"></span><h2>forums.tests module<a class="headerlink" href="#module-forums.tests" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="forums.tests.PostModelTest">
+<em class="property">class </em><code class="descclassname">forums.tests.</code><code class="descname">PostModelTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.tests.PostModelTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="classmethod">
+<dt id="forums.tests.PostModelTest.test_correct_length">
+<em class="property">classmethod </em><code class="descname">test_correct_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forums.tests.PostModelTest.test_correct_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forums.urls">
+<span id="forums-urls-module"></span><h2>forums.urls module<a class="headerlink" href="#module-forums.urls" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-forums.views">
+<span id="forums-views-module"></span><h2>forums.views module<a class="headerlink" href="#module-forums.views" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="forums.views.PostCreateView">
+<em class="property">class </em><code class="descclassname">forums.views.</code><code class="descname">PostCreateView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostCreateView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.mixins.LoginRequiredMixin</span></code>, <code class="xref py py-class docutils literal"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<dl class="attribute">
+<dt id="forums.views.PostCreateView.fields">
+<code class="descname">fields</code><em class="property"> = ['title', 'content']</em><a class="headerlink" href="#forums.views.PostCreateView.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forums.views.PostCreateView.form_valid">
+<code class="descname">form_valid</code><span class="sig-paren">(</span><em>form</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostCreateView.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forums.views.PostCreateView.model">
+<code class="descname">model</code><a class="headerlink" href="#forums.views.PostCreateView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Post</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="forums.views.PostDeleteView">
+<em class="property">class </em><code class="descclassname">forums.views.</code><code class="descname">PostDeleteView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostDeleteView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.mixins.LoginRequiredMixin</span></code>, <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.mixins.UserPassesTestMixin</span></code>, <code class="xref py py-class docutils literal"><span class="pre">django.views.generic.edit.DeleteView</span></code></p>
+<dl class="attribute">
+<dt id="forums.views.PostDeleteView.model">
+<code class="descname">model</code><a class="headerlink" href="#forums.views.PostDeleteView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Post</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forums.views.PostDeleteView.success_url">
+<code class="descname">success_url</code><em class="property"> = '/'</em><a class="headerlink" href="#forums.views.PostDeleteView.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forums.views.PostDeleteView.test_func">
+<code class="descname">test_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostDeleteView.test_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="forums.views.PostDetailView">
+<em class="property">class </em><code class="descclassname">forums.views.</code><code class="descname">PostDetailView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostDetailView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.views.generic.detail.DetailView</span></code></p>
+<dl class="attribute">
+<dt id="forums.views.PostDetailView.model">
+<code class="descname">model</code><a class="headerlink" href="#forums.views.PostDetailView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Post</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="forums.views.PostListView">
+<em class="property">class </em><code class="descclassname">forums.views.</code><code class="descname">PostListView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostListView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<dl class="attribute">
+<dt id="forums.views.PostListView.context_object_name">
+<code class="descname">context_object_name</code><em class="property"> = 'posts'</em><a class="headerlink" href="#forums.views.PostListView.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forums.views.PostListView.get_context_data">
+<code class="descname">get_context_data</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostListView.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forums.views.PostListView.model">
+<code class="descname">model</code><a class="headerlink" href="#forums.views.PostListView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Post</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forums.views.PostListView.ordering">
+<code class="descname">ordering</code><em class="property"> = ['-date_posted']</em><a class="headerlink" href="#forums.views.PostListView.ordering" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forums.views.PostListView.paginate_by">
+<code class="descname">paginate_by</code><em class="property"> = 10</em><a class="headerlink" href="#forums.views.PostListView.paginate_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forums.views.PostListView.template_name">
+<code class="descname">template_name</code><em class="property"> = 'post_list.html'</em><a class="headerlink" href="#forums.views.PostListView.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="forums.views.PostUpdateView">
+<em class="property">class </em><code class="descclassname">forums.views.</code><code class="descname">PostUpdateView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostUpdateView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.mixins.LoginRequiredMixin</span></code>, <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.mixins.UserPassesTestMixin</span></code>, <code class="xref py py-class docutils literal"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<dl class="attribute">
+<dt id="forums.views.PostUpdateView.fields">
+<code class="descname">fields</code><em class="property"> = ['title', 'content']</em><a class="headerlink" href="#forums.views.PostUpdateView.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forums.views.PostUpdateView.form_valid">
+<code class="descname">form_valid</code><span class="sig-paren">(</span><em>form</em><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostUpdateView.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forums.views.PostUpdateView.model">
+<code class="descname">model</code><a class="headerlink" href="#forums.views.PostUpdateView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Post</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="forums.views.PostUpdateView.test_func">
+<code class="descname">test_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forums.views.PostUpdateView.test_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forums">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-forums" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">forums package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-forums.admin">forums.admin module</a></li>
+<li><a class="reference internal" href="#module-forums.apps">forums.apps module</a></li>
+<li><a class="reference internal" href="#module-forums.models">forums.models module</a></li>
+<li><a class="reference internal" href="#module-forums.tests">forums.tests module</a></li>
+<li><a class="reference internal" href="#module-forums.urls">forums.urls module</a></li>
+<li><a class="reference internal" href="#module-forums.views">forums.views module</a></li>
+<li><a class="reference internal" href="#module-forums">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="OnlineHealthCare.html" title="previous chapter">OnlineHealthCare package</a></li>
+      <li>Next: <a href="forums.migrations.html" title="next chapter">forums.migrations package</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/forums.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Pranto.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/forums.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

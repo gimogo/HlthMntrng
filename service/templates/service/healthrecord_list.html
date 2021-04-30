@@ -1,0 +1,31 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h1>My Heath Record</h1>
+<div class="container col-md-10">
+
+  <table class="table table-hover table-bordered table-striped">
+    <thead>
+      <tr class="table-primary">
+        <th>Type of Record</th>
+        <th>Date</th>
+        <th>report</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for record in healthrecords %}
+      <tr>
+        <td>{{record.type_of_Record}}</td>
+        <!-- <td>{{hospital.area}}</td> -->
+        <td>{{record.date}}</td>
+        <td><a href="{{record.file.url}}">See details</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+<div class="container col-md-8">
+    <div class="content-section">
+        <div class="border-top pt-3">
+            <small class="text-muted">
+              <h1>{{ user.username }}</h1>
+              {% if user.is_doctor %}
+                <p>Specilization: {{ user.doctor.specialization }}</p>
+              {% endif %}
+              {% if user.is_patient and user.patient.get_bmi %}
+                <p>BMI: {{ user.patient.get_bmi }}</p>
+                <p>User ID: {{ user.id }}</p>
+              {% endif %}
+            </small>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container col-md-10">
+  <legend class="border-bottom mb-4">All Hospitals({{hospitals.count }}): </legend>
+  <table class="table table-hover table-bordered table-striped">
+    <thead>
+      <tr class="table-primary">
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for hospital in hospitals %}
+      <tr>
+        <td>{{hospital.name}}</td>
+        <!-- <td>{{hospital.area}}</td> -->
+        <td>{{hospital.location}}</td>
+        <td>{{ hospital.phone }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+{% endblock content %}

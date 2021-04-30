@@ -1,0 +1,28 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <legend class="border-bottom mb-4">All Docotrs({{doctors.count }}): </legend>
+  <table class="table table-hover table-bordered table-striped">
+    <thead>
+      <tr class="table-primary">
+        <th>Picture</th>
+        <th>Name</th>
+        <th>specialization</th>
+        <th>Education</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for doctor in doctors %}
+      <tr>
+        <td><img src="{{ doctor.image.url }}" height="40px"></td>
+        <td>{{doctor.user.username}}</td>
+        <td>{{doctor.specialization}}</td>
+        <td>{{doctor.education}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+{% endblock content %}

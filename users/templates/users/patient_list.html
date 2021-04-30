@@ -1,0 +1,24 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <legend class="border-bottom mb-4">All Patients({{patients.count }}): </legend>
+  <table class="table table-hover table-bordered table-striped">
+    <thead>
+      <tr class="table-primary">
+        <th>Name</th>
+        <th>Problem</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for patient in patients %}
+      <tr>
+        <td>{{patient.user.username}}</td>
+        <td>{{patient.health_problem}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+{% endblock content %}

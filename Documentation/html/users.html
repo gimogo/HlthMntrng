@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>users package &mdash; OnlineHealthMonitoring-master 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="OnlineHealthCare-master 1.0 documentation" href="index.html" />
+    <link rel="prev" title="service.migrations package" href="service.migrations.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="users-package">
+<h1>users package<a class="headerlink" href="#users-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-users.admin">
+<span id="users-admin-module"></span><h2>users.admin module<a class="headerlink" href="#module-users.admin" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-users.apps">
+<span id="users-apps-module"></span><h2>users.apps module<a class="headerlink" href="#module-users.apps" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="users.apps.UsersConfig">
+<em class="property">class </em><code class="descclassname">users.apps.</code><code class="descname">UsersConfig</code><span class="sig-paren">(</span><em>app_name</em>, <em>app_module</em><span class="sig-paren">)</span><a class="headerlink" href="#users.apps.UsersConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.apps.config.AppConfig</span></code></p>
+<dl class="attribute">
+<dt id="users.apps.UsersConfig.name">
+<code class="descname">name</code><em class="property"> = 'users'</em><a class="headerlink" href="#users.apps.UsersConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="users.apps.UsersConfig.ready">
+<code class="descname">ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#users.apps.UsersConfig.ready" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-users.forms">
+<span id="users-forms-module"></span><h2>users.forms module<a class="headerlink" href="#module-users.forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="users.forms.DoctorUpdateForm">
+<em class="property">class </em><code class="descclassname">users.forms.</code><code class="descname">DoctorUpdateForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#users.forms.DoctorUpdateForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<dl class="class">
+<dt id="users.forms.DoctorUpdateForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#users.forms.DoctorUpdateForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="users.forms.DoctorUpdateForm.Meta.fields">
+<code class="descname">fields</code><em class="property"> = ['specialization', 'education', 'image']</em><a class="headerlink" href="#users.forms.DoctorUpdateForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.DoctorUpdateForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#users.forms.DoctorUpdateForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Doctor</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.DoctorUpdateForm.base_fields">
+<code class="descclassname">DoctorUpdateForm.</code><code class="descname">base_fields</code><em class="property"> = {'specialization': &lt;django.forms.fields.CharField object at 0x0000023AC6632E50&gt;, 'education': &lt;django.forms.fields.CharField object at 0x0000023AC6632E20&gt;, 'image': &lt;django.forms.fields.ImageField object at 0x0000023AC6632A00&gt;}</em><a class="headerlink" href="#users.forms.DoctorUpdateForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.DoctorUpdateForm.declared_fields">
+<code class="descclassname">DoctorUpdateForm.</code><code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#users.forms.DoctorUpdateForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.DoctorUpdateForm.media">
+<code class="descclassname">DoctorUpdateForm.</code><code class="descname">media</code><a class="headerlink" href="#users.forms.DoctorUpdateForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="users.forms.PatientUpdateForm">
+<em class="property">class </em><code class="descclassname">users.forms.</code><code class="descname">PatientUpdateForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#users.forms.PatientUpdateForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<dl class="class">
+<dt id="users.forms.PatientUpdateForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#users.forms.PatientUpdateForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="users.forms.PatientUpdateForm.Meta.fields">
+<code class="descname">fields</code><em class="property"> = ['height', 'weight', 'image', 'health_problem']</em><a class="headerlink" href="#users.forms.PatientUpdateForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.PatientUpdateForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#users.forms.PatientUpdateForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Patient</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.PatientUpdateForm.base_fields">
+<code class="descclassname">PatientUpdateForm.</code><code class="descname">base_fields</code><em class="property"> = {'height': &lt;django.forms.fields.FloatField object at 0x0000023AC66402E0&gt;, 'weight': &lt;django.forms.fields.FloatField object at 0x0000023AC66400D0&gt;, 'image': &lt;django.forms.fields.ImageField object at 0x0000023AC66EF760&gt;, 'health_problem': &lt;django.forms.fields.CharField object at 0x0000023AC66EF820&gt;}</em><a class="headerlink" href="#users.forms.PatientUpdateForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.PatientUpdateForm.declared_fields">
+<code class="descclassname">PatientUpdateForm.</code><code class="descname">declared_fields</code><em class="property"> = {'height': &lt;django.forms.fields.FloatField object at 0x0000023AC66402E0&gt;, 'weight': &lt;django.forms.fields.FloatField object at 0x0000023AC66400D0&gt;}</em><a class="headerlink" href="#users.forms.PatientUpdateForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.PatientUpdateForm.media">
+<code class="descclassname">PatientUpdateForm.</code><code class="descname">media</code><a class="headerlink" href="#users.forms.PatientUpdateForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="users.forms.PrescriptionRequestForm">
+<em class="property">class </em><code class="descclassname">users.forms.</code><code class="descname">PrescriptionRequestForm</code><span class="sig-paren">(</span><em>data=None</em>, <em>files=None</em>, <em>auto_id='id_%s'</em>, <em>prefix=None</em>, <em>initial=None</em>, <em>error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em>label_suffix=None</em>, <em>empty_permitted=False</em>, <em>instance=None</em>, <em>use_required_attribute=None</em>, <em>renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#users.forms.PrescriptionRequestForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.forms.models.ModelForm</span></code></p>
+<dl class="class">
+<dt id="users.forms.PrescriptionRequestForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#users.forms.PrescriptionRequestForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="users.forms.PrescriptionRequestForm.Meta.fields">
+<code class="descname">fields</code><em class="property"> = ['health_problem']</em><a class="headerlink" href="#users.forms.PrescriptionRequestForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.PrescriptionRequestForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#users.forms.PrescriptionRequestForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Patient</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.PrescriptionRequestForm.base_fields">
+<code class="descclassname">PrescriptionRequestForm.</code><code class="descname">base_fields</code><em class="property"> = {'health_problem': &lt;django.forms.fields.CharField object at 0x0000023AC66EFA60&gt;}</em><a class="headerlink" href="#users.forms.PrescriptionRequestForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.PrescriptionRequestForm.declared_fields">
+<code class="descclassname">PrescriptionRequestForm.</code><code class="descname">declared_fields</code><em class="property"> = {}</em><a class="headerlink" href="#users.forms.PrescriptionRequestForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.PrescriptionRequestForm.media">
+<code class="descclassname">PrescriptionRequestForm.</code><code class="descname">media</code><a class="headerlink" href="#users.forms.PrescriptionRequestForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="users.forms.UserRegisterForm">
+<em class="property">class </em><code class="descclassname">users.forms.</code><code class="descname">UserRegisterForm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.forms.UserRegisterForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.forms.UserCreationForm</span></code></p>
+<dl class="class">
+<dt id="users.forms.UserRegisterForm.Meta">
+<em class="property">class </em><code class="descname">Meta</code><a class="headerlink" href="#users.forms.UserRegisterForm.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="users.forms.UserRegisterForm.Meta.fields">
+<code class="descname">fields</code><em class="property"> = ['username', 'email', 'is_doctor', 'is_patient', 'password1', 'password2']</em><a class="headerlink" href="#users.forms.UserRegisterForm.Meta.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.UserRegisterForm.Meta.model">
+<code class="descname">model</code><a class="headerlink" href="#users.forms.UserRegisterForm.Meta.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">User</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.UserRegisterForm.base_fields">
+<code class="descclassname">UserRegisterForm.</code><code class="descname">base_fields</code><em class="property"> = {'username': &lt;django.forms.fields.CharField object at 0x0000023AC6640250&gt;, 'email': &lt;django.forms.fields.EmailField object at 0x0000023AC6640C70&gt;, 'is_doctor': &lt;django.forms.fields.BooleanField object at 0x0000023AC6632A90&gt;, 'is_patient': &lt;django.forms.fields.BooleanField object at 0x0000023AC6640460&gt;, 'password1': &lt;django.forms.fields.CharField object at 0x0000023AC65C58B0&gt;, 'password2': &lt;django.forms.fields.CharField object at 0x0000023AC65CF1C0&gt;}</em><a class="headerlink" href="#users.forms.UserRegisterForm.base_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.UserRegisterForm.declared_fields">
+<code class="descclassname">UserRegisterForm.</code><code class="descname">declared_fields</code><em class="property"> = {'password1': &lt;django.forms.fields.CharField object at 0x0000023AC65C58B0&gt;, 'password2': &lt;django.forms.fields.CharField object at 0x0000023AC65CF1C0&gt;, 'email': &lt;django.forms.fields.EmailField object at 0x0000023AC6640C70&gt;}</em><a class="headerlink" href="#users.forms.UserRegisterForm.declared_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.forms.UserRegisterForm.media">
+<code class="descclassname">UserRegisterForm.</code><code class="descname">media</code><a class="headerlink" href="#users.forms.UserRegisterForm.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-users.models">
+<span id="users-models-module"></span><h2>users.models module<a class="headerlink" href="#module-users.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="users.models.Doctor">
+<em class="property">class </em><code class="descclassname">users.models.</code><code class="descname">Doctor</code><span class="sig-paren">(</span><em>id</em>, <em>user</em>, <em>specialization</em>, <em>education</em>, <em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#users.models.Doctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="exception">
+<dt id="users.models.Doctor.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#users.models.Doctor.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="users.models.Doctor.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">Doctor.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#users.models.Doctor.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Doctor.doctors">
+<code class="descclassname">Doctor.</code><code class="descname">doctors</code><a class="headerlink" href="#users.models.Doctor.doctors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Doctor.education">
+<code class="descclassname">Doctor.</code><code class="descname">education</code><a class="headerlink" href="#users.models.Doctor.education" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Doctor.id">
+<code class="descclassname">Doctor.</code><code class="descname">id</code><a class="headerlink" href="#users.models.Doctor.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Doctor.image">
+<code class="descclassname">Doctor.</code><code class="descname">image</code><a class="headerlink" href="#users.models.Doctor.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Doctor.objects">
+<code class="descclassname">Doctor.</code><code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object at 0x0000023AC86DA640&gt;</em><a class="headerlink" href="#users.models.Doctor.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Doctor.specialization">
+<code class="descclassname">Doctor.</code><code class="descname">specialization</code><a class="headerlink" href="#users.models.Doctor.specialization" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Doctor.user">
+<code class="descclassname">Doctor.</code><code class="descname">user</code><a class="headerlink" href="#users.models.Doctor.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a one-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Restaurant.place</span></code> is a <code class="docutils literal"><span class="pre">ForwardOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Doctor.user_id">
+<code class="descclassname">Doctor.</code><code class="descname">user_id</code><a class="headerlink" href="#users.models.Doctor.user_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="users.models.Patient">
+<em class="property">class </em><code class="descclassname">users.models.</code><code class="descname">Patient</code><span class="sig-paren">(</span><em>id</em>, <em>user</em>, <em>image</em>, <em>date_registered</em>, <em>health_problem</em>, <em>height</em>, <em>weight</em><span class="sig-paren">)</span><a class="headerlink" href="#users.models.Patient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="exception">
+<dt id="users.models.Patient.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#users.models.Patient.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="users.models.Patient.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">Patient.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#users.models.Patient.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.date_registered">
+<code class="descclassname">Patient.</code><code class="descname">date_registered</code><a class="headerlink" href="#users.models.Patient.date_registered" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.eprescription">
+<code class="descclassname">Patient.</code><code class="descname">eprescription</code><a class="headerlink" href="#users.models.Patient.eprescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="users.models.Patient.get_bmi">
+<code class="descclassname">Patient.</code><code class="descname">get_bmi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#users.models.Patient.get_bmi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="users.models.Patient.get_next_by_date_registered">
+<code class="descclassname">Patient.</code><code class="descname">get_next_by_date_registered</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: date_registered&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.models.Patient.get_next_by_date_registered" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="users.models.Patient.get_previous_by_date_registered">
+<code class="descclassname">Patient.</code><code class="descname">get_previous_by_date_registered</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: date_registered&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.models.Patient.get_previous_by_date_registered" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.health_problem">
+<code class="descclassname">Patient.</code><code class="descname">health_problem</code><a class="headerlink" href="#users.models.Patient.health_problem" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.height">
+<code class="descclassname">Patient.</code><code class="descname">height</code><a class="headerlink" href="#users.models.Patient.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.id">
+<code class="descclassname">Patient.</code><code class="descname">id</code><a class="headerlink" href="#users.models.Patient.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.image">
+<code class="descclassname">Patient.</code><code class="descname">image</code><a class="headerlink" href="#users.models.Patient.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.objects">
+<code class="descclassname">Patient.</code><code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object at 0x0000023AC86DA730&gt;</em><a class="headerlink" href="#users.models.Patient.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.user">
+<code class="descclassname">Patient.</code><code class="descname">user</code><a class="headerlink" href="#users.models.Patient.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a one-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Restaurant.place</span></code> is a <code class="docutils literal"><span class="pre">ForwardOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.user_id">
+<code class="descclassname">Patient.</code><code class="descname">user_id</code><a class="headerlink" href="#users.models.Patient.user_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.Patient.weight">
+<code class="descclassname">Patient.</code><code class="descname">weight</code><a class="headerlink" href="#users.models.Patient.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="users.models.User">
+<em class="property">class </em><code class="descclassname">users.models.</code><code class="descname">User</code><span class="sig-paren">(</span><em>id</em>, <em>password</em>, <em>last_login</em>, <em>is_superuser</em>, <em>username</em>, <em>first_name</em>, <em>last_name</em>, <em>email</em>, <em>is_staff</em>, <em>is_active</em>, <em>date_joined</em>, <em>is_patient</em>, <em>is_doctor</em><span class="sig-paren">)</span><a class="headerlink" href="#users.models.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.models.AbstractUser</span></code></p>
+<dl class="exception">
+<dt id="users.models.User.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#users.models.User.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="users.models.User.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">User.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#users.models.User.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.doctor">
+<code class="descclassname">User.</code><code class="descname">doctor</code><a class="headerlink" href="#users.models.User.doctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the reverse side of a one-to-one
+relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Place.restaurant</span></code> is a <code class="docutils literal"><span class="pre">ReverseOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.emailaddress_set">
+<code class="descclassname">User.</code><code class="descname">emailaddress_set</code><a class="headerlink" href="#users.models.User.emailaddress_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.eprescription">
+<code class="descclassname">User.</code><code class="descname">eprescription</code><a class="headerlink" href="#users.models.User.eprescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="users.models.User.get_next_by_date_joined">
+<code class="descclassname">User.</code><code class="descname">get_next_by_date_joined</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: date_joined&gt;</em>, <em>is_next=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.models.User.get_next_by_date_joined" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="users.models.User.get_previous_by_date_joined">
+<code class="descclassname">User.</code><code class="descname">get_previous_by_date_joined</code><span class="sig-paren">(</span><em>*</em>, <em>field=&lt;django.db.models.fields.DateTimeField: date_joined&gt;</em>, <em>is_next=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.models.User.get_previous_by_date_joined" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.groups">
+<code class="descclassname">User.</code><code class="descname">groups</code><a class="headerlink" href="#users.models.User.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.id">
+<code class="descclassname">User.</code><code class="descname">id</code><a class="headerlink" href="#users.models.User.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.is_doctor">
+<code class="descclassname">User.</code><code class="descname">is_doctor</code><a class="headerlink" href="#users.models.User.is_doctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.is_patient">
+<code class="descclassname">User.</code><code class="descname">is_patient</code><a class="headerlink" href="#users.models.User.is_patient" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.logentry_set">
+<code class="descclassname">User.</code><code class="descname">logentry_set</code><a class="headerlink" href="#users.models.User.logentry_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.patient">
+<code class="descclassname">User.</code><code class="descname">patient</code><a class="headerlink" href="#users.models.User.patient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the reverse side of a one-to-one
+relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">OneToOneField</span><span class="p">(</span><span class="n">Place</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;restaurant&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Place.restaurant</span></code> is a <code class="docutils literal"><span class="pre">ReverseOneToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.patients">
+<code class="descclassname">User.</code><code class="descname">patients</code><a class="headerlink" href="#users.models.User.patients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.post_set">
+<code class="descclassname">User.</code><code class="descname">post_set</code><a class="headerlink" href="#users.models.User.post_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.socialaccount_set">
+<code class="descclassname">User.</code><code class="descname">socialaccount_set</code><a class="headerlink" href="#users.models.User.socialaccount_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Parent.children</span></code> is a <code class="docutils literal"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="users.models.User.user_permissions">
+<code class="descclassname">User.</code><code class="descname">user_permissions</code><a class="headerlink" href="#users.models.User.user_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-users.signals">
+<span id="users-signals-module"></span><h2>users.signals module<a class="headerlink" href="#module-users.signals" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="users.signals.create_doctor">
+<code class="descclassname">users.signals.</code><code class="descname">create_doctor</code><span class="sig-paren">(</span><em>sender</em>, <em>instance</em>, <em>created</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.signals.create_doctor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="users.signals.create_patient">
+<code class="descclassname">users.signals.</code><code class="descname">create_patient</code><span class="sig-paren">(</span><em>sender</em>, <em>instance</em>, <em>created</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.signals.create_patient" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-users.urls">
+<span id="users-urls-module"></span><h2>users.urls module<a class="headerlink" href="#module-users.urls" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-users.views">
+<span id="users-views-module"></span><h2>users.views module<a class="headerlink" href="#module-users.views" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="users.views.DoctorListView">
+<em class="property">class </em><code class="descclassname">users.views.</code><code class="descname">DoctorListView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.DoctorListView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<dl class="attribute">
+<dt id="users.views.DoctorListView.context_object_name">
+<code class="descname">context_object_name</code><em class="property"> = 'doctors'</em><a class="headerlink" href="#users.views.DoctorListView.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.views.DoctorListView.model">
+<code class="descname">model</code><a class="headerlink" href="#users.views.DoctorListView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Doctor</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="users.views.PatientListView">
+<em class="property">class </em><code class="descclassname">users.views.</code><code class="descname">PatientListView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.PatientListView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<dl class="attribute">
+<dt id="users.views.PatientListView.context_object_name">
+<code class="descname">context_object_name</code><em class="property"> = 'patients'</em><a class="headerlink" href="#users.views.PatientListView.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.views.PatientListView.model">
+<code class="descname">model</code><a class="headerlink" href="#users.views.PatientListView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Patient</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="users.views.PatientUpdateView">
+<em class="property">class </em><code class="descclassname">users.views.</code><code class="descname">PatientUpdateView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.PatientUpdateView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.mixins.LoginRequiredMixin</span></code>, <code class="xref py py-class docutils literal"><span class="pre">django.contrib.auth.mixins.UserPassesTestMixin</span></code>, <code class="xref py py-class docutils literal"><span class="pre">django.views.generic.edit.UpdateView</span></code></p>
+<dl class="attribute">
+<dt id="users.views.PatientUpdateView.fields">
+<code class="descname">fields</code><em class="property"> = ['health_problem']</em><a class="headerlink" href="#users.views.PatientUpdateView.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="users.views.PatientUpdateView.form_valid">
+<code class="descname">form_valid</code><span class="sig-paren">(</span><em>form</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.PatientUpdateView.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="users.views.PatientUpdateView.model">
+<code class="descname">model</code><a class="headerlink" href="#users.views.PatientUpdateView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">Patient</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="users.views.PatientUpdateView.test_func">
+<code class="descname">test_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#users.views.PatientUpdateView.test_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="users.views.edit_doctor_profile">
+<code class="descclassname">users.views.</code><code class="descname">edit_doctor_profile</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.edit_doctor_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="users.views.edit_patient_profile">
+<code class="descclassname">users.views.</code><code class="descname">edit_patient_profile</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.edit_patient_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="users.views.prescription_request">
+<code class="descclassname">users.views.</code><code class="descname">prescription_request</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.prescription_request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="users.views.profile">
+<code class="descclassname">users.views.</code><code class="descname">profile</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="users.views.register">
+<code class="descclassname">users.views.</code><code class="descname">register</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#users.views.register" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-users">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-users" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">users package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-users.admin">users.admin module</a></li>
+<li><a class="reference internal" href="#module-users.apps">users.apps module</a></li>
+<li><a class="reference internal" href="#module-users.forms">users.forms module</a></li>
+<li><a class="reference internal" href="#module-users.models">users.models module</a></li>
+<li><a class="reference internal" href="#module-users.signals">users.signals module</a></li>
+<li><a class="reference internal" href="#module-users.urls">users.urls module</a></li>
+<li><a class="reference internal" href="#module-users.views">users.views module</a></li>
+<li><a class="reference internal" href="#module-users">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="service.migrations.html" title="previous chapter">service.migrations package</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/users.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Pranto.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/users.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

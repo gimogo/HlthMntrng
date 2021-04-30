@@ -1,0 +1,106 @@
+
+{% extends "home/base.html" %}
+
+
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<head>
+  {% load static %}
+    <link href="{% static 'service/style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<title>
+</title>
+
+<h2>
+</h2>
+<body>
+  <div>
+
+  <div class="headersec">
+    <div class="top-name">
+
+      <span class="healix-title">
+        <h2> Healix </h2>
+      </span>
+
+      <p> An online solution for doctor and patients </p>
+    </div>
+      <span class="date-class">
+        <h4> Date : {{object.date_posted|date:"d/m/y"}} </h4>
+      </span>
+
+      <ul>
+
+      <span class="DoctorName"> Dr. {{object.doctor_name}}  </span>
+      <span class="Specialization"> {{object.doctor_name.doctor.Specialization}} </span>
+      <span class="Specialization"> {{object.doctor_name.doctor.education}}  </span>
+
+    </ul>
+    <ul>
+      <span class="Specialization"> Block c,Bashundhara,Dhaka-1229 </span>
+      <span class="date-class"> <p> phone : 01700000000 </p> </span>
+    </ul>
+    <span class="date-class"> <p>Email : healix@northsouth.edu </p> </span>
+
+
+
+  </div>
+
+
+    <hr size="5px" color="red">
+    <div>
+
+      <ul>
+
+        <span style="padding-right:500px" >  Patient Name : {{object.patient}}  </span>
+       <span > Age : null  </span>
+        <span style="padding-left:500px" >    Gender : M/F </span>
+      </ul>
+
+    <br>
+
+      <ul>
+
+        <span style="padding-right:550px" >  Address :  </span>
+       <span > Date : {{object.date_posted|date:"d/m/y"}}  </span>
+
+      </ul>
+
+
+    <div class ="problem">
+      <h4> Problem :  </h4>
+
+        <p class="problem-class">
+          {{object.patient.health_problem}}
+       </p>
+
+    </div>
+
+    <div class ="problem">
+      <h4> Medicine : </h4>
+
+        <p class="problem-class">
+        {{object.comment}}
+       </p>
+
+    </div>
+
+    <div>
+      <h4> Comment : </h4>
+        <p class="comment"> It should be treated Carefully </p>
+    </div>
+
+
+    </div>
+
+  </div>
+    <hr font-size="3px" color="red" style="margin-bottom:100px">
+
+  </body>
+  </html>
+
+
+{% endblock content %}

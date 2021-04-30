@@ -1,0 +1,34 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container col-md-10">
+  <legend class="border-bottom mb-4">All prescriptions: </legend>
+  <table class="table table-hover table-bordered table-striped">
+    <thead>
+      <tr class="table-primary">
+        <th>Doctor</th>
+        <th>Patient</th>
+        <th>Medicines</th>
+        <th>Comment</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for p in prescriptions %}
+        {% if p.doctor_name == user or p.patient == user.patient %}
+        <tr>
+          <td>{{p.doctor_name}}</td>
+          <td>{{p.patient}}</td>
+          <td>{{p.medicine_name}}</td>
+          <td>{{ p.comment }}</td>
+          <td><a href="{% url 'prescription-detail' p.id %}">See Details</a></td>
+        </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+{% endblock content %}

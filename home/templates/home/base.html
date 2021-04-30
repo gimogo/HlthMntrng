@@ -1,0 +1,260 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="{% static 'home/hospital.png' %}" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="{% static 'home/style/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'home/style/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/style/lib/owlcarousel/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/style/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/style/lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'home/style/lib/modal-video/css/modal-video.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'home/style/css/style.css' %}" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}">
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+  {% if title %}
+      <title>Health Monitoring - {{ title }}</title>
+  {% else %}
+      <title>Health Monitoring</title>
+  {% endif %}
+
+  {% comment %} <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= --> {% endcomment %}
+</head>
+
+<body>
+
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="{% url 'home' %}" class="scrollto"><span>Health</span>Monitoring</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'blog' %}">Health Blog</a></li>
+
+          {% if user.is_patient %}
+          <li class="menu-has-children"><a href="">Service</a>
+            <ul>
+              <li><a href="{% url 'prescription_request' %}">E-Prescription</a></li>
+              <li><a href="{% url 'appointment' %}">E-Appointment</a></li>
+              <li><a href="{% url 'healthrecord' %}">Set Health Record</a></li>
+            </ul>
+          </li>
+            <li><a href="{% url 'myhealthrecord' %}">My Health Record</a></li>
+          <li class="menu-has-children"><a href="">Medic</a>
+            <ul>
+              <li><a href="{% url 'doctors'%}">Doctors</a></li>
+              <li><a href="#">Nurses</a></li>
+            </ul>
+          </li>
+          {% endif %}
+
+
+          {% if user.is_doctor %}
+            <li><a href="{% url 'patients'%}">Patients</a></li>
+            <li><a href="{% url 'createPres'%}">E-Prescription</a></li>
+          {% endif %}
+
+          <li><a href="{% url 'hospitals' %}">Hospitals</a></li>
+
+          {% if user.is_authenticated %}
+          <li class="menu-has-children"><a href="">Your Tab</a>
+            <ul>
+              <li><a href="{% url 'profile'  %}">Profile</a></li>
+              {% if user.is_doctor %}
+                <li><a href="{% url 'docedit'  %}">Edit Profile</a></li>
+              {% endif %}
+              {% if user.is_patient %}
+                <li><a href="{% url 'patedit'  %}">Edit Profile</a></li>
+              {% endif %}
+
+              
+              <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+          </li>
+          {% else %}
+              <li><a href="{% url 'login' %}">Login</a></li>
+              <li><a href="{% url 'register' %}">Register</a></li>
+          {% endif %}
+
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+
+
+  <main role="main" class="container-fluid">
+
+
+    <div class="container">
+
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+      {% block content %}{% endblock %}
+    </div>
+
+
+</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">Health Monitoring</a>
+            <p>A project to unite doctor and patient in a virtual platform.</p>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <!-- <h4>About Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Featured item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul> -->
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <!-- <h4>About Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Featured item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul> -->
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Support</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">faq</a></li>
+              <li><a href="#">Editor help</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>About Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Features item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights Health Monitoring. All rights reserved.</p>
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+          -->
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'home/style/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'home/style/lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'home/style/lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'home/style/lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'home/style/lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'home/style/lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'home/style/lib/modal-video/js/modal-video.js' %}"></script>
+  <script src="{% static 'home/style/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'home/style/lib/wow/wow.min.js' %}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'home/style/js/main.js' %}"></script>
+
+</body>
+</html>
